@@ -1,0 +1,45 @@
+a{
+    color: coral;
+    text-decoration: none;
+    padding: 10px;
+}
+h1{
+    font-style: normal;
+    font-size: 45px;
+    text-align: center;
+    margin: 0;
+    border-bottom: 2px solid dodgerblue;
+    padding: 25px;
+    color: coral;
+}
+body{
+    margin: 0;
+    text-align: center;
+    color: coral;
+}
+#grid ol{
+    margin: 0;
+    padding: 20px;
+    width: 100px;
+}
+
+
+#grid{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    text-align: center;
+}
+@media (min-width: 450px) {
+    #grid{
+        display: block;
+    }
+    #grid ol{
+        border-right: none;
+    }
+    h1{
+        border-bottom: none;
+    }
+}
+#article{
+    padding-left: 25px;
+}
