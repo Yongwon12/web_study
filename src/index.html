@@ -1,21 +1,54 @@
 <!doctype html>
 <html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"><!--css의 코드를 가져오기 위한 코드-->
+
     <title>맺음</title>
     <head>
-     <h1>맺음</h1>
+     <h1><a href="index.html">맺음</a></h1>
     </head>
-
+    <script>
+        function nightDayHandler(self)
+        {
+            var target = document.querySelector('body'); <!--주야를 하나의 버튼으로 제어-->
+            if (self.value === '야간') {               <!--링크가 달려있는 문자열의 색상을 배열과 반복문을 사용하여 구현-->
+                target.style.backgroundColor = 'coral';
+                target.style.color = 'powderblue';
+                self.value = '주간';
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'powderblue';
+                    i = i + 1;
+                }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'coral';
+                self.value = '야간';
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'coral';
+                    i = i + 1;
+                }
+            }
+        }
+    </script>
 
 <body>
+    <p>
+        <input type="button" value="야간" onclick="
+        nightDayHandler(this);
+        ">
+
+    </p>
     <a href="1.html">커뮤니티</a>
     <a href="2.html">중고</a>
     <a href="3.html">스포츠</a>
     <div id = grid>
     <div id="article">
         <p>
-    <a href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Nov0920&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-kr-1003227-med-hasem-py-Evergreen-Nov0920-Text_Search_BKWS-BKWS%7CONSEM_kwid_43700058439439279_creativeid_477138308523_device_c&gclid=CjwKCAiAvK2bBhB8EiwAZUbP1EwaIv4UbBIZ_v4ipUmtSC7NYSJIwyJZQXCRkGTJEcZQawtmikwRWxoCk_gQAvD_BwE&gclsrc=aw.ds&pli=1"><img src="handshake.jpg" width = "100"></a>
+    <a href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Nov0920&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-kr-1003227-med-hasem-py-Evergreen-Nov0920-Text_Search_BKWS-BKWS%7CONSEM_kwid_43700058439439279_creativeid_477138308523_device_c&gclid=CjwKCAiAvK2bBhB8EiwAZUbP1EwaIv4UbBIZ_v4ipUmtSC7NYSJIwyJZQXCRkGTJEcZQawtmikwRWxoCk_gQAvD_BwE&gclsrc=aw.ds&pli=1"><img src="home.jpg" width = "100"></a>
     </p>
     people to people make relationship.
     <strong><u>check it up now!</u></strong><br>
@@ -29,5 +62,6 @@
 <strong>이미지를 클릭하여 구글스토어로 이동</strong>
     </div>
 </div>
+
 </body>
 </html>
