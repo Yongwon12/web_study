@@ -9,17 +9,43 @@
 <h2>Basic</h2>
 <ul>
   <script>
-    function two() {
-      document.write('<li>2-1</li>');
-      document.write('<li>2-2</li>');
-    }
-    document.write('<li>1</li>');
-    two(); <!--괄호가 닫히는 것을(있는 것을) 인식하고 함수를 실행시킴-->
-    document.write('<li>3</li>');
-    two();
+      function two() { <!-- 함수의 사용 -->
+          document.write('<li>2-1</li>');
+          document.write('<li>2-2</li>');
+      }
+      document.write('<li>1</li>');
+      two(); <!-- two 까지는 그냥 단어로 보고 그 후에 괄호를 보고 함수로 판단 -->
+      document.write('<li>3</li>');
+      two();
   </script>
 </ul>
 <h2>Parameter & Argument</h2>
+<script>
+    function onePlusOne() {
+        document.write(1 + 1+'<br>');
+    }
+    onePlusOne();
+
+    function sum(left, right) {
+        document.write(left + right +'<br>');
+    }
+    function sumColorRed(left, right) {
+        document.write('<div style="color: red">'+left + right +'</div>');
+    }
+    sum(2, 3);  // 5
+    sumColorRed(2, 3);
+    sum(3, 4); // 7
+</script>
 <h2>Return</h2>
+<script>
+    function sum2(left, right) {
+        return left + right; <!-- 자유도를 주어 다양한 용도로 함수를 사용가능-->
+
+    }
+    document.write(sum2(2,3)+'<br>');
+    document.write('<div style="color: red">'+sum2(2,3)+'</div>');
+    document.write('<div style="font-size: 3rem">' + sum2(2, 3) + '</div>');
+
+</script>
 </body>
 </html>

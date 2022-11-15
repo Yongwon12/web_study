@@ -7,39 +7,12 @@
     <head>
      <h1><a href="index.html">맺음</a></h1>
     </head>
-    <script>
-        function nightDayHandler(self)
-        {
-            var target = document.querySelector('body'); <!--주야를 하나의 버튼으로 제어-->
-            if (self.value === '야간') {               <!--링크가 달려있는 문자열의 색상을 배열과 반복문을 사용하여 구현-->
-                target.style.backgroundColor = 'coral';
-                target.style.color = 'powderblue';
-                self.value = '주간';
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'powderblue';
-                    i = i + 1;
-                }
-            } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'coral';
-                self.value = '야간';
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'coral';
-                    i = i + 1;
-                }
-            }
-        }
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
 
 <body>
     <p>
-        <input type="button" value="야간" onclick="
-        nightDayHandler(this);
-        ">
+        <input type="button" value="야간" onclick="nightDayHandler(this);">
 
     </p>
     <a href="1.html">커뮤니티</a>
